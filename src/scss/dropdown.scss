@@ -1,0 +1,93 @@
+.dropdown{
+    width: 240px;
+    height: 100vh;
+    background: #F3F4F9;
+    flex-direction: column;
+    padding-top: 41px;
+    padding-left: 42px;
+    position: absolute;
+    left: -500px;
+    top: 0;
+    transition: 0.5s;
+    display: none;
+    @include for-size(tablet){
+        display: flex;
+        z-index: 99;
+    }
+    @include for-size(mobile){
+        width: 192px;
+        padding-left: 20px;
+        height: 568px;
+    }
+    &__btn{
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        right: -48px;
+        top: 35px;
+        background: #F3F4F9;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        img{
+            width: 23px;
+            height: 17px;
+        }
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+        img{
+            width: 48px;
+            height: 48px;
+            @include for-size(mobile){
+                width: 24px;
+                height: 24px;
+            }
+        }
+        span{
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #333333;
+            margin-left: 10px;
+        }
+        @include for-size(mobile){
+            font-size: 14px;
+        }
+    }
+    &__list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &__item{
+            margin-bottom: 50px;
+            a{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: #333333;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 15px;
+                    @include for-size(mobile){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.dropdown__active{
+    left: 0;
+}

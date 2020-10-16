@@ -1,0 +1,15 @@
+@import'./product.scss';
+@import './header.scss';
+.content{
+    width: 1200px;
+    height: 1045px;
+    background: #FAFAFA;
+    @include for-size(tablet){
+        width: 665px;
+        height: 1272px;
+    }
+    @include for-size(mobile){
+        width: 308px;
+        height: 1158px;
+    }
+}

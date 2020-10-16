@@ -1,0 +1,100 @@
+.navbar{
+    width: 240px;
+    height: 1045px;
+    background: #F3F4F9;
+    display: flex;
+    flex-direction: column;
+    padding-top: 41px;
+    padding-left: 42px;
+    position: relative;
+    @include for-size(tablet){
+        width: 104px;
+        height: 1272px;
+    }
+    @include for-size(mobile){
+        height: 1158px;
+        width: 12px;
+        padding: 0;
+    }
+    &__btn{
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        right: -48px;
+        top: 35px;
+        background: #F3F4F9;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: none;
+        cursor: pointer;
+        @include for-size(tablet){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 23px;
+            height: 17px;
+        }
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        // border: 1px solid red;
+        margin-bottom: 60px;
+        @include for-size(mobile){
+           display: none;
+        }
+        img{
+            width: 48px;
+            height: 48px;
+            @include for-size(tablet){
+                width: 23px;
+                height: 23px;
+            }
+        }
+        span{
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #333333;
+            margin-left: 10px;
+            @include for-size(tablet){
+                display: none;
+            }
+        }
+    }
+    &__list{
+        // border: 1px solid red;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @include for-size(mobile){
+            display: none;
+        }
+        &__item{
+            margin-bottom: 50px;
+            a{
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: #333333;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 15px;
+                }
+                span{
+                    @include for-size(tablet){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

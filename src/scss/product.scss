@@ -1,0 +1,115 @@
+.product{
+    width: 100%;
+    background: #FAFAFA;
+    height: 844px;
+    padding: 40px 60px;
+    overflow-y:auto;
+    @include for-size(tablet){
+        padding: 27px 26px;
+        height: 1091px;
+    }
+    @include for-size(mobile){
+        padding: 27px 20px;
+        height: 982px;
+    }
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow-y: auto;
+    }
+    &__cart{
+        width: 31%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #fff;
+        display: flex;
+        // border: 1px solid red;
+        @include for-size(tablet){
+            width: 49%;
+        }
+        @include for-size(mobile){
+            width: 100%;
+        }
+        &__content{
+            width: 80%;
+            // border: 1px solid red;
+            position: relative;
+            padding: 16px 0 16px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &__info{
+                // background: red;
+                h3{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    @include for-size(tablet){
+                        font-size: 14px;
+                    }
+                    @include for-size(mobile){
+                        font-size: 12px;
+                    }
+                }
+                p{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 16px;  
+                    color: #000000;
+                    opacity: 0.5;
+                    text-transform: none;
+                    @include for-size(tablet){
+                        font-size: 14px;
+                    }
+                    @include for-size(mobile){
+                        font-size: 12px;
+                    }
+                }
+            }
+            &__discount{
+                h3{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 28px;
+                    color: #DF212D;
+                    margin-bottom: 8px;
+                    @include for-size(tablet){
+                        font-size: 36px;
+                    }
+                    @include for-size(mobile){
+                        font-size: 28px;
+                    }
+                }
+                p{
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    color: #000000;
+                    opacity: 0.5;
+                    @include for-size(mobile){
+                        font-size: 12px;
+                    }
+                }        
+            }
+        }
+        // &__picture{
+            // border: 1px solid red;
+            // float: right;
+        // }
+        &__img{
+            width: 100%;
+	        height: auto;
+        }
+    }
+}

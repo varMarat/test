@@ -1,0 +1,10 @@
+@import './content.scss';
+@import './navbar.scss';
+@import './dropdown.scss';
+.wrapper{
+    display: flex;
+    // border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
